@@ -31,9 +31,3 @@ Deployment
 bashnpm run build
 
 
-Contact
-
-
-Email: gathri07@gmail.com
-GitHub: GayathriS18
-LinkedIn: Gayathri Sudheesh
