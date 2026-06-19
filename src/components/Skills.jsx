@@ -12,31 +12,20 @@ function Skills() {
   ];
 
   return (
-    <section
-      id="skills"
-      className="relative py-32 overflow-hidden"
-    >
-      {/* Background Typography */}
-
-      <div className="bg-word top-0 right-[-120px]">
-        SKILLS
-      </div>
+    <section id="skills" className="relative py-32 overflow-hidden">
+      <div className="bg-word top-0 right-[-120px]">SKILLS</div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-
-        {/* Heading */}
-
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="section-title mb-24"
+          className="section-title"
+          style={{ marginBottom: "6rem" }}
         >
           SKILLS
-          
         </motion.h2>
 
-        {/* Creative Cards */}
         <div className="grid gap-8 md:grid-cols-2">
           {categories.map((category, index) => (
             <motion.div
@@ -47,10 +36,9 @@ function Skills() {
               viewport={{ once: true }}
               className="skill-card"
             >
-              <div className="mb-6">
+              <div style={{ marginBottom: "1.5rem" }}>
                 <h4 className="text-sm uppercase tracking-[0.3em] text-gray-400">{category.title}</h4>
               </div>
-
               <div className="skill-grid">
                 {category.items.map((skill) => (
                   <button key={skill} className="skill-item" aria-label={skill}>
@@ -63,14 +51,18 @@ function Skills() {
           ))}
         </div>
 
-        {/* Bottom Statement */}
-        <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mt-32 max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          style={{ marginTop: "3rem" }}
+          className="max-w-4xl"
+        >
           <p className="text-3xl md:text-4xl font-black uppercase leading-tight">
             CONSTANTLY LEARNING, BUILDING, TESTING,
             AND IMPROVING THROUGH REAL-WORLD PROJECTS.
           </p>
         </motion.div>
-
       </div>
     </section>
   );

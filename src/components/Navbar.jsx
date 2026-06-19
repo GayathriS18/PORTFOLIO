@@ -4,9 +4,10 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#hero" },
-  { label: "Projects", href: "#projects" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
   { label: "Resume", href: "#resume" },
   { label: "Contact", href: "#contact" },
 ];
@@ -21,14 +22,7 @@ function Navbar() {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 w-full z-50 px-6 md:px-10 py-6"
     >
-      <div className="flex items-center justify-between">
-        <a
-          href="#projects"
-          className="lime-btn tracking-[0.3em] text-xs px-6 py-3"
-        >
-          WORK
-        </a>
-
+      <div className="flex items-center justify-end">
         <div
           onClick={() => setOpen((prev) => !prev)}
           className="w-14 h-14 flex items-center justify-center border border-white/10 bg-[#1a241a]/70 backdrop-blur-md hover:border-[#d7ff3f] transition-all duration-300 cursor-pointer"
@@ -62,7 +56,7 @@ function Navbar() {
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  padding: "22px 24px",
+                  padding: "20px 24px",
                   borderBottom: "1px solid rgba(255,255,255,0.07)",
                   borderLeft: "3px solid transparent",
                   transition: "all 0.2s ease",
